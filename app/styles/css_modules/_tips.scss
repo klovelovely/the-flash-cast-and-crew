@@ -1,0 +1,30 @@
+/*
+ * tip bubbles default style
+ */
+.tip-trigger {
+  padding: .2rem 0;
+  position: static;
+  & .photo {
+    border: 1px solid #eee;
+    transition: ease-in-out .2s;
+    opacity: .4;
+    filter: blur(2px);
+  }
+  &:hover .photo {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.tip-box {
+  position: absolute;
+  z-index: 99;
+  display: none;
+  max-width: 3rem;
+  padding: .2rem;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, .8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}

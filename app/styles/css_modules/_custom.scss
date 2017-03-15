@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/**
+ * 初始化整站基础样式
+ */
+html {
+    font-size: 100px;
+    body {
+        font-size: .16rem;
+        line-height: .26rem;
+        font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", Tahoma, Arial, STHeiti, sans-serif;
+        overflow-y: scroll;
+        padding-bottom: 3rem;
+        ul, ol {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        & > .container:first-child {
+            min-height: 6.1rem;
+        }
+
+        & > .container,
+        & > .container-fluid {
+            padding-top: .2rem;
+        }
+
+        /* 头部的整站导航样式 */
+        .global-header {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+/**
+ * 常用样式库
+ */
+
+.disn {
+    display: none;
+}
+
+.translucent {
+    opacity: .5;
+}
+
+.hidden-for-viewport {
+    position: absolute;
+    left: -9999em;
+    right: -9999em;
+}
+
+/**
+ * 自定义组件库
+ *layout/
+
+/* 自定义页面 */
+.customizedPage {
+    .pageTitle {
+        position: relative;
+        height: .45rem;
+        line-height: .45rem;
+        margin: .3rem;
+        font-size: .20rem;
+        text-align: center;
+        &:before,
+        &:after {
+            position: absolute;
+            top: .22rem;
+            content: '';
+            display: block;
+            width: calc(50% - 17em);
+            height: 1px;
+            background: $default-color;
+        }
+        &:before {
+            left: 12em;
+        }
+        &:after {
+            right: 12em;
+        }
+    }
+    .pageContent {
+
+    }
+}
+
+/* 自定义模块 */
+.customizedBox {
+    .boxTitle {
+        padding-left: 1em;
+        line-height: 2;
+        min-height: 1em;
+        &:before {
+            content: '';
+            float: left;
+            display: block;
+            width: .2em;
+            height: 1em;
+            margin: .5em 0 0 -.6em;
+            background: $default-color;
+        }
+
+    }
+    .boxContent {
+
+    }
+}

@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/*
+ * bootstrap default style
+ */
+@media (min-width: 768px) {
+    .dl-horizontal dt {
+        float:left;
+        width: 5em;
+        clear: left;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+
+    .dl-horizontal dd {
+        margin-left: 6em
+    }
+}
+
+/**
+ * mobile device style
+ **/
+@media (max-width: 991px) {
+
+    /* 所有表单项(输入框, 按钮等), 在小屏幕下会单行显示, 所以在小屏幕下, 上下间距统一增加10 */
+    @for $i from 1 to 13 {
+        .form-group .col-md-#{$i} {
+            margin: 10px 0;
+        }
+    }
+
+}
+
+/* 页面头部的导航, 在窄屏和移动端下因宽度不够会产生换行, 所以设置整体宽度自适应, 并压缩导航项之间的左右间距  */
+@media (min-width: 768px) and (max-width: 1280px) {
+
+    .global-header {
+        .container {
+            width: 100%;
+        }
+        .global-navbar {
+            .navbar-nav {
+                & > li {
+                    padding-left: .025rem;
+                    padding-right: .025rem;
+                }
+            }
+        }
+    }
+
+}

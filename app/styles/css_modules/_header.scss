@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/**
+ * header 页面头部
+ */
+.global-header {
+    border: 0 none;
+    border-bottom: 1px rgba(255, 255, 255, 0.15) solid;
+    background: #000;
+    box-shadow: 0 0 .1rem rgba(0, 0, 0, .2);
+    .global-topbar {
+        background-color: #e1e1e1;
+        .nav {
+            a {
+                padding: .1rem .15rem;
+            }
+        }
+    }
+
+    .global-navbar {
+        .navbar-header {
+            .navbar-brand {
+                margin-left: .5rem;
+                padding: .1rem 0;
+                height: .7rem;
+                > img, > span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: #fff;
+                    letter-spacing: .03rem;
+                }
+                > span {
+                    padding-left: .2rem;
+                }
+            }
+        }
+        .navbar-nav {
+            padding: .1rem 0;
+            & > li {
+                padding-left: .10rem;
+                padding-right: .10rem;
+                & > a {
+                    font-size: .18rem;
+                    color: #fff;
+                }
+                &.reverse {
+                    padding-top: .1rem;
+                    padding-bottom: .1rem;
+                }
+                &.reverse > a {
+                    margin-top: -2px;
+                    padding: .05rem .25rem;
+                    border-radius: .05rem;
+                    background: #23a1ec;
+                    color: #fff;
+                }
+            }
+            & > .active {
+                & > a,
+                & > a:hover,
+                & > a:focus {
+                    color: $primary-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .navbar-mobile {
+
+    }
+}

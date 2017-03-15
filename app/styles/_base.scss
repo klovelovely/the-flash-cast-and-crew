@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* 整站默认基础样式 */
+
+/**
+ * 基础变量值定义
+ */
+@import 'css_modules/variables';
+
+/**
+ * CSS RESET (based from normalize.css)
+*/
+@import 'css_modules/reset';
+
+/**
+ * 通用库
+ */
+@import 'css_modules/layout';
+@import 'css_modules/tips';
+/**
+ * custom 定制化的整站基础样式 (整站全局默认样式 => 写在这里)
+ */
+@import 'css_modules/custom';
+
+/**
+ * header 页面头部
+ */
+@import 'css_modules/header';
+
+/**
+ * footer 页面底部
+ */
+@import 'css_modules/footer';
+
+/**
+ * Media Queries 多终端适配 (宽屏, 窄屏, 移动端 三种状态下的不同样式代码 => 写在这里)
+ */
+@import 'css_modules/media';
